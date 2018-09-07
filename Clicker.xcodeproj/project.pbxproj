@@ -12,7 +12,57 @@
 		01CC43E220B5D40300F7798F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CC43E020B5D40300F7798F /* Main.storyboard */; };
 		01CC43E420B5D40400F7798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CC43E320B5D40400F7798F /* Assets.xcassets */; };
 		01CC43E720B5D40400F7798F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CC43E520B5D40400F7798F /* LaunchScreen.storyboard */; };
+		01CC43F420B5D43A00F7798F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CC43F220B5D43A00F7798F /* Interface.storyboard */; };
+		01CC43F620B5D43B00F7798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CC43F520B5D43B00F7798F /* Assets.xcassets */; };
+		01CC43FD20B5D43B00F7798F /* ClickerW Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01CC43FC20B5D43B00F7798F /* ClickerW Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		01CC440220B5D43B00F7798F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC440120B5D43B00F7798F /* InterfaceController.swift */; };
+		01CC440420B5D43B00F7798F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC440320B5D43B00F7798F /* ExtensionDelegate.swift */; };
+		01CC440620B5D43C00F7798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CC440520B5D43C00F7798F /* Assets.xcassets */; };
+		01CC440A20B5D43C00F7798F /* ClickerW.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 01CC43F020B5D43A00F7798F /* ClickerW.app */; };
+		01CC441720B5D7B500F7798F /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC441620B5D7B500F7798F /* Defaults.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01CC43FE20B5D43B00F7798F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC43D120B5D40300F7798F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01CC43FB20B5D43B00F7798F;
+			remoteInfo = "ClickerW Extension";
+		};
+		01CC440820B5D43C00F7798F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01CC43D120B5D40300F7798F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01CC43EF20B5D43A00F7798F;
+			remoteInfo = ClickerW;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01CC440E20B5D43C00F7798F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				01CC43FD20B5D43B00F7798F /* ClickerW Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01CC441220B5D43C00F7798F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				01CC440A20B5D43C00F7798F /* ClickerW.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		01CC43D920B5D40300F7798F /* Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +72,27 @@
 		01CC43E320B5D40400F7798F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01CC43E620B5D40400F7798F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01CC43E820B5D40400F7798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CC43F020B5D43A00F7798F /* ClickerW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickerW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CC43F320B5D43A00F7798F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		01CC43F520B5D43B00F7798F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01CC43F720B5D43B00F7798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CC43FC20B5D43B00F7798F /* ClickerW Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ClickerW Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01CC440120B5D43B00F7798F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		01CC440320B5D43B00F7798F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		01CC440520B5D43C00F7798F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01CC440720B5D43C00F7798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CC441620B5D7B500F7798F /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		01CC43D620B5D40300F7798F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01CC43F920B5D43B00F7798F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				01CC43DB20B5D40300F7798F /* Clicker */,
+				01CC43F120B5D43A00F7798F /* ClickerW */,
+				01CC440020B5D43B00F7798F /* ClickerW Extension */,
 				01CC43DA20B5D40300F7798F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				01CC43D920B5D40300F7798F /* Clicker.app */,
+				01CC43F020B5D43A00F7798F /* ClickerW.app */,
+				01CC43FC20B5D43B00F7798F /* ClickerW Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +135,36 @@
 			path = Clicker;
 			sourceTree = "<group>";
 		};
+		01CC43F120B5D43A00F7798F /* ClickerW */ = {
+			isa = PBXGroup;
+			children = (
+				01D096E8214295C600019EE7 /* UI Extension */,
+				01CC43F220B5D43A00F7798F /* Interface.storyboard */,
+				01CC43F520B5D43B00F7798F /* Assets.xcassets */,
+				01CC43F720B5D43B00F7798F /* Info.plist */,
+			);
+			path = ClickerW;
+			sourceTree = "<group>";
+		};
+		01CC440020B5D43B00F7798F /* ClickerW Extension */ = {
+			isa = PBXGroup;
+			children = (
+				01CC440120B5D43B00F7798F /* InterfaceController.swift */,
+				01CC440320B5D43B00F7798F /* ExtensionDelegate.swift */,
+				01CC441620B5D7B500F7798F /* Defaults.swift */,
+				01CC440520B5D43C00F7798F /* Assets.xcassets */,
+				01CC440720B5D43C00F7798F /* Info.plist */,
+			);
+			path = "ClickerW Extension";
+			sourceTree = "<group>";
+		};
+		01D096E8214295C600019EE7 /* UI Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "UI Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +175,51 @@
 				01CC43D520B5D40300F7798F /* Sources */,
 				01CC43D620B5D40300F7798F /* Frameworks */,
 				01CC43D720B5D40300F7798F /* Resources */,
+				01CC441220B5D43C00F7798F /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				01CC440920B5D43C00F7798F /* PBXTargetDependency */,
 			);
 			name = Clicker;
 			productName = Clicker;
 			productReference = 01CC43D920B5D40300F7798F /* Clicker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		01CC43EF20B5D43A00F7798F /* ClickerW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01CC440F20B5D43C00F7798F /* Build configuration list for PBXNativeTarget "ClickerW" */;
+			buildPhases = (
+				01CC43EE20B5D43A00F7798F /* Resources */,
+				01CC440E20B5D43C00F7798F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01CC43FF20B5D43B00F7798F /* PBXTargetDependency */,
+			);
+			name = ClickerW;
+			productName = ClickerW;
+			productReference = 01CC43F020B5D43A00F7798F /* ClickerW.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		01CC43FB20B5D43B00F7798F /* ClickerW Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01CC440B20B5D43C00F7798F /* Build configuration list for PBXNativeTarget "ClickerW Extension" */;
+			buildPhases = (
+				01CC43F820B5D43B00F7798F /* Sources */,
+				01CC43F920B5D43B00F7798F /* Frameworks */,
+				01CC43FA20B5D43B00F7798F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ClickerW Extension";
+			productName = "ClickerW Extension";
+			productReference = 01CC43FC20B5D43B00F7798F /* ClickerW Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +232,12 @@
 				ORGANIZATIONNAME = "Andrii Halabuda";
 				TargetAttributes = {
 					01CC43D820B5D40300F7798F = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					01CC43EF20B5D43A00F7798F = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					01CC43FB20B5D43B00F7798F = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -113,6 +256,8 @@
 			projectRoot = "";
 			targets = (
 				01CC43D820B5D40300F7798F /* Clicker */,
+				01CC43EF20B5D43A00F7798F /* ClickerW */,
+				01CC43FB20B5D43B00F7798F /* ClickerW Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +273,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01CC43EE20B5D43A00F7798F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CC43F620B5D43B00F7798F /* Assets.xcassets in Resources */,
+				01CC43F420B5D43A00F7798F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01CC43FA20B5D43B00F7798F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CC440620B5D43C00F7798F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +302,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01CC43F820B5D43B00F7798F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CC441720B5D7B500F7798F /* Defaults.swift in Sources */,
+				01CC440420B5D43B00F7798F /* ExtensionDelegate.swift in Sources */,
+				01CC440220B5D43B00F7798F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01CC43FF20B5D43B00F7798F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01CC43FB20B5D43B00F7798F /* ClickerW Extension */;
+			targetProxy = 01CC43FE20B5D43B00F7798F /* PBXContainerItemProxy */;
+		};
+		01CC440920B5D43C00F7798F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01CC43EF20B5D43A00F7798F /* ClickerW */;
+			targetProxy = 01CC440820B5D43C00F7798F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		01CC43E020B5D40300F7798F /* Main.storyboard */ = {
@@ -157,6 +342,14 @@
 				01CC43E620B5D40400F7798F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		01CC43F220B5D43A00F7798F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01CC43F320B5D43A00F7798F /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -312,6 +505,88 @@
 			};
 			name = Release;
 		};
+		01CC440C20B5D43C00F7798F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTRW36GG78;
+				INFOPLIST_FILE = "ClickerW Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.Clicker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		01CC440D20B5D43C00F7798F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTRW36GG78;
+				INFOPLIST_FILE = "ClickerW Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.Clicker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		01CC441020B5D43C00F7798F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTRW36GG78;
+				IBSC_MODULE = ClickerW_Extension;
+				INFOPLIST_FILE = ClickerW/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.Clicker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		01CC441120B5D43C00F7798F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTRW36GG78;
+				IBSC_MODULE = ClickerW_Extension;
+				INFOPLIST_FILE = ClickerW/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.losAngelesBoy.Clicker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +604,24 @@
 			buildConfigurations = (
 				01CC43EC20B5D40400F7798F /* Debug */,
 				01CC43ED20B5D40400F7798F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01CC440B20B5D43C00F7798F /* Build configuration list for PBXNativeTarget "ClickerW Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01CC440C20B5D43C00F7798F /* Debug */,
+				01CC440D20B5D43C00F7798F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01CC440F20B5D43C00F7798F /* Build configuration list for PBXNativeTarget "ClickerW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01CC441020B5D43C00F7798F /* Debug */,
+				01CC441120B5D43C00F7798F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

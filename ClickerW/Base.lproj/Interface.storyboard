@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ClickerW" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Minus" id="GSG-Zj-IkP">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.062745098040000002" green="0.69610523889999998" blue="0.93775882099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="17"/>
+                            <connections>
+                                <action selector="clicked" destination="AgC-eL-Hgc" id="gdk-Xx-ZZf"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Add" id="4ha-Gt-2hR">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.93357044458389282" green="0.38682956676805935" blue="0.3865564374339594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="17"/>
+                            <connections>
+                                <action selector="added" destination="AgC-eL-Hgc" id="1u7-IG-OHz"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="74" alignment="center" text="Data" textAlignment="center" baselineAdjustment="alignCenters" id="cYm-Ub-30c">
+                            <color key="textColor" red="0.062745098040000002" green="0.69610523889999998" blue="0.93775882099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="40"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="clickBtn" destination="GSG-Zj-IkP" id="fLC-wT-YkS"/>
+                        <outlet property="outputLbl" destination="cYm-Ub-30c" id="gdI-ay-jfS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="40" y="31"/>
+        </scene>
+    </scenes>
+</document>

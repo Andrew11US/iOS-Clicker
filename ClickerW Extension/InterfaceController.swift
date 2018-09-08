@@ -69,7 +69,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         print("Message from iPhone")
         
-        //<< Message goes here
+        if let valueIOS = message["value"] as! String? {
+            let valueInt = Int(valueIOS)
+            
+            DispatchQueue.main.async {
+                self.outputLbl.setText(valueIOS)
+                defaults.set(valueInt!, forKey: "Stored")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.outputLbl.setText(String(self.value!))
+                defaults.set(valueInt!, forKey: "Stored")
+            }
+        }
     }
     
     @IBAction func clicked() {
@@ -79,6 +90,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             self.outputLbl.setText(String(value!))
             defaults.set(value!, forKey: "Stored")
         }
+        
+        if (WCSession.isSupported()) {
+            
+            let messageDictionary = ["value": String(value!)]
+            session.sendMessage(messageDictionary, replyHandler: { (content: [String: Any]) -> Void in
+                print("Our counterpart sent something back. This is optional")
+            }, errorHandler: { (error) -> Void in
+                print("We got an error from our paired device : \(error.localizedDescription)")
+            })
+        }
     }
     
     @IBAction func added() {
@@ -87,6 +108,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             value! += 1
             self.outputLbl.setText(String(value!))
             defaults.set(value!, forKey: "Stored")
+        }
+        
+        if (WCSession.isSupported()) {
+            
+            let messageDictionary = ["value": String(value!)]
+            session.sendMessage(messageDictionary, replyHandler: { (content: [String: Any]) -> Void in
+                print("Our counterpart sent something back. This is optional")
+            }, errorHandler: { (error) -> Void in
+                print("We got an error from our paired device : \(error.localizedDescription)")
+            })
         }
     }
     

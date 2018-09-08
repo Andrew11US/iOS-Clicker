@@ -52,13 +52,20 @@ class ViewController: UIViewController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         print(message.description)
         
-//        DispatchQueue.main.async {
-//            tappedButton.setTitle(nameString, for: .normal)
-//        }
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            tappedButton.setTitle(oldTitle, for: .normal)
-//        }
+        print(message.description)
+        
+        let value = message["value"] as! String
+        let valueInt = Int(value)
+        
+        DispatchQueue.main.async {
+            self.dataLbl.text = String(value)
+            IOS_DEFAULTS.set(valueInt!, forKey: "Stored")
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.dataLbl.text = String(value)
+            IOS_DEFAULTS.set(valueInt!, forKey: "Stored")
+        }
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -70,37 +77,48 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        
+        print("Session become Inactive!")
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        
-    }
-    
-    @IBAction func addButtonTapped(_ sender: UIButton) {
-        
-//        session.sendMessage(messageDict, replyHandler: { (content: [String : Any]) -> Void in
-//            print("Our counterpart sent something back. This is optional.")
-//        }) { (error) -> Void in
-//            print("We got an error from our watch device: \(error.localizedDescription)")
-//        }
+        print("Session has been deactivated!")
     }
     
     @IBAction func minusTapped(_ sender: UIButton) {
+        
+        var messageDictionary = [String : String]()
         
         if value != nil {
             value! -= 1
             self.dataLbl.text = String(value!)
             IOS_DEFAULTS.set(value!, forKey: "Stored")
+            
+            messageDictionary = ["value" : String(value!)]
+        }
+        
+        session.sendMessage(messageDictionary, replyHandler: { (content: [String : Any]) -> Void in
+            print("Our counterpart sent something back. This is optional.")
+        }) { (error) -> Void in
+            print("We got an error from our watch device: \(error.localizedDescription)")
         }
     }
     
     @IBAction func addTapped(_ sender: UIButton) {
         
+        var messageDictionary = [String : String]()
+        
         if value != nil {
             value! += 1
             self.dataLbl.text = String(value!)
             IOS_DEFAULTS.set(value!, forKey: "Stored")
+            
+            messageDictionary = ["value" : String(value!)]
+        }
+        
+        session.sendMessage(messageDictionary, replyHandler: { (content: [String : Any]) -> Void in
+            print("Our counterpart sent something back. This is optional.")
+        }) { (error) -> Void in
+            print("We got an error from our watch device: \(error.localizedDescription)")
         }
     }
 

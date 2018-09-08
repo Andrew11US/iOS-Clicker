@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0172E3422143E2EC0065F5A1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0172E3412143E2EC0065F5A1 /* Defaults.swift */; };
 		01CC43DD20B5D40300F7798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC43DC20B5D40300F7798F /* AppDelegate.swift */; };
 		01CC43DF20B5D40300F7798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC43DE20B5D40300F7798F /* ViewController.swift */; };
 		01CC43E220B5D40300F7798F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CC43E020B5D40300F7798F /* Main.storyboard */; };
@@ -19,7 +20,7 @@
 		01CC440420B5D43B00F7798F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC440320B5D43B00F7798F /* ExtensionDelegate.swift */; };
 		01CC440620B5D43C00F7798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CC440520B5D43C00F7798F /* Assets.xcassets */; };
 		01CC440A20B5D43C00F7798F /* ClickerW.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 01CC43F020B5D43A00F7798F /* ClickerW.app */; };
-		01CC441720B5D7B500F7798F /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC441620B5D7B500F7798F /* Defaults.swift */; };
+		01D096EA2142989200019EE7 /* CustomInterfaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D096E92142989200019EE7 /* CustomInterfaceButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0172E3412143E2EC0065F5A1 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		01CC43D920B5D40300F7798F /* Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CC43DC20B5D40300F7798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CC43DE20B5D40300F7798F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		01CC440320B5D43B00F7798F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		01CC440520B5D43C00F7798F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01CC440720B5D43C00F7798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01CC441620B5D7B500F7798F /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		01D096E92142989200019EE7 /* CustomInterfaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInterfaceButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0122FF862143E23E00159AC4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				01CC43DC20B5D40300F7798F /* AppDelegate.swift */,
+				01CC43E820B5D40400F7798F /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		015B96932143DA1500C8FB7F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				01CC43E520B5D40400F7798F /* LaunchScreen.storyboard */,
+				01CC43E020B5D40300F7798F /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		015B96942143DA1D00C8FB7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		015B96952143DA2400C8FB7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		015B96962143DA3400C8FB7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01CC43DE20B5D40300F7798F /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		01CC43D020B5D40300F7798F = {
 			isa = PBXGroup;
 			children = (
@@ -125,12 +167,12 @@
 		01CC43DB20B5D40300F7798F /* Clicker */ = {
 			isa = PBXGroup;
 			children = (
-				01CC43DC20B5D40300F7798F /* AppDelegate.swift */,
-				01CC43DE20B5D40300F7798F /* ViewController.swift */,
-				01CC43E020B5D40300F7798F /* Main.storyboard */,
+				015B96932143DA1500C8FB7F /* UI */,
 				01CC43E320B5D40400F7798F /* Assets.xcassets */,
-				01CC43E520B5D40400F7798F /* LaunchScreen.storyboard */,
-				01CC43E820B5D40400F7798F /* Info.plist */,
+				015B96952143DA2400C8FB7F /* View */,
+				015B96942143DA1D00C8FB7F /* Model */,
+				015B96962143DA3400C8FB7F /* Controller */,
+				0122FF862143E23E00159AC4 /* Support Files */,
 			);
 			path = Clicker;
 			sourceTree = "<group>";
@@ -151,7 +193,7 @@
 			children = (
 				01CC440120B5D43B00F7798F /* InterfaceController.swift */,
 				01CC440320B5D43B00F7798F /* ExtensionDelegate.swift */,
-				01CC441620B5D7B500F7798F /* Defaults.swift */,
+				0172E3412143E2EC0065F5A1 /* Defaults.swift */,
 				01CC440520B5D43C00F7798F /* Assets.xcassets */,
 				01CC440720B5D43C00F7798F /* Info.plist */,
 			);
@@ -161,6 +203,7 @@
 		01D096E8214295C600019EE7 /* UI Extension */ = {
 			isa = PBXGroup;
 			children = (
+				01D096E92142989200019EE7 /* CustomInterfaceButton.swift */,
 			);
 			name = "UI Extension";
 			sourceTree = "<group>";
@@ -297,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D096EA2142989200019EE7 /* CustomInterfaceButton.swift in Sources */,
 				01CC43DF20B5D40300F7798F /* ViewController.swift in Sources */,
 				01CC43DD20B5D40300F7798F /* AppDelegate.swift in Sources */,
 			);
@@ -306,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01CC441720B5D7B500F7798F /* Defaults.swift in Sources */,
+				0172E3422143E2EC0065F5A1 /* Defaults.swift in Sources */,
 				01CC440420B5D43B00F7798F /* ExtensionDelegate.swift in Sources */,
 				01CC440220B5D43B00F7798F /* InterfaceController.swift in Sources */,
 			);

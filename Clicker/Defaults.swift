@@ -9,4 +9,4 @@
 import UIKit
 import Foundation
 
-let defaults = UserDefaults.standard
+let IOS_DEFAULTS = UserDefaults.standard

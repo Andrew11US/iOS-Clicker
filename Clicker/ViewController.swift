@@ -13,9 +13,12 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     //MARK: Properties
     let session: WCSession!
+    var value: Int? = IOS_DEFAULTS.integer(forKey: "Stored")
     
     //MARK: Outlets
-    // << outlets >>
+    @IBOutlet weak var dataLbl: UILabel!
+    @IBOutlet weak var minusBtn: UIButton!
+    @IBOutlet weak var addBtn: UIButton!
     
     //MARK: Init
     required init?(coder aDecoder: NSCoder) {
@@ -23,13 +26,24 @@ class ViewController: UIViewController, WCSessionDelegate {
         super.init(coder: aDecoder)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if WCSession.isSupported() {
             session.delegate = self
             session.activate()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if value != nil {
+            self.dataLbl.text = String(value!)
+            
+        } else {
+            IOS_DEFAULTS.set(0, forKey: "Stored")
+            self.dataLbl.text = String(value!)
         }
     }
     
@@ -70,6 +84,24 @@ class ViewController: UIViewController, WCSessionDelegate {
 //        }) { (error) -> Void in
 //            print("We got an error from our watch device: \(error.localizedDescription)")
 //        }
+    }
+    
+    @IBAction func minusTapped(_ sender: UIButton) {
+        
+        if value != nil {
+            value! -= 1
+            self.dataLbl.text = String(value!)
+            IOS_DEFAULTS.set(value!, forKey: "Stored")
+        }
+    }
+    
+    @IBAction func addTapped(_ sender: UIButton) {
+        
+        if value != nil {
+            value! += 1
+            self.dataLbl.text = String(value!)
+            IOS_DEFAULTS.set(value!, forKey: "Stored")
+        }
     }
 
 

@@ -39,7 +39,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             defaults.set(0, forKey: "Stored")
             self.outputLbl.setText(String(value!))
         }
-        
     }
     
     override func willActivate() {

@@ -28,6 +28,9 @@
                                         <state key="normal" title="Minus">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="minusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdD-Wf-JQo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oF-Zz-RyD">
                                         <rect key="frame" x="0.0" y="55" width="335" height="45"/>
@@ -36,6 +39,9 @@
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txD-JV-SKL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -63,6 +69,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addBtn" destination="6oF-Zz-RyD" id="oDw-Ib-vKJ"/>
+                        <outlet property="dataLbl" destination="VRx-pD-ref" id="iAF-Om-TGn"/>
+                        <outlet property="minusBtn" destination="BOI-fI-IdW" id="c4D-av-mTu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

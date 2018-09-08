@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0172E3422143E2EC0065F5A1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0172E3412143E2EC0065F5A1 /* Defaults.swift */; };
+		0172E344214426180065F5A1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0172E343214426180065F5A1 /* Defaults.swift */; };
 		01CC43DD20B5D40300F7798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC43DC20B5D40300F7798F /* AppDelegate.swift */; };
 		01CC43DF20B5D40300F7798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CC43DE20B5D40300F7798F /* ViewController.swift */; };
 		01CC43E220B5D40300F7798F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CC43E020B5D40300F7798F /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		0172E3412143E2EC0065F5A1 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		0172E343214426180065F5A1 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		01CC43D920B5D40300F7798F /* Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CC43DC20B5D40300F7798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CC43DE20B5D40300F7798F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		015B96942143DA1D00C8FB7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0172E343214426180065F5A1 /* Defaults.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0172E344214426180065F5A1 /* Defaults.swift in Sources */,
 				01CC43DF20B5D40300F7798F /* ViewController.swift in Sources */,
 				01CC43DD20B5D40300F7798F /* AppDelegate.swift in Sources */,
 			);
